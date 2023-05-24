@@ -1,20 +1,20 @@
-package com.example.pr4_gurdzhi.UserInterfaces;
+package com.example.pr4_gurdzhi.UserInterface;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Toast;
+
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
-import com.example.pr4_gurdzhi.UserInterface.BookRecycleAdapter;
+
 import com.example.pr4_gurdzhi.R;
 import com.example.pr4_gurdzhi.UserInterface.ViewModel.BookViewModel;
-import com.example.pr4_gurdzhi.ViewModels.BookViewPattern;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class BookList extends Fragment {
@@ -57,7 +57,7 @@ public class BookList extends Fragment {
 
         floatingActionButton.setOnClickListener(view1 -> {
             bookViewModel.createDataInAppSpecific(requireContext(), "Test", "Test");
-            bookViewModel.createDataInAppSpecific(requireContext(), "Test", "Test");
+            bookViewModel.createDataInSharedPreferences(requireActivity(), "Test", "Test");
             bookViewModel.createDataInExternal(requireActivity(), "Test", "Test");
         });
 

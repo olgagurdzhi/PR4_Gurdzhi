@@ -40,5 +40,12 @@
             android:name="userName"
             app:argType="string"
             android:defaultValue="Бодя" />
+        <action
+            android:id="@+id/action_blankFragment3_to_blankFragment4"
+            app:destination="@id/blankFragment4" />
     </fragment>
+    <fragment
+        android:id="@+id/blankFragment4"
+        android:name="com.example.pr4_gurdzhi.UserInterface.BlankFragment4"
+        android:label="BlankFragment4" />
 </navigation>
